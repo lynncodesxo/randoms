@@ -2,25 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>type shift</title>
+  <title>HI TWIN</title>
   <style>
     body {
-      margin: 0;
       height: 100vh;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #f5f5f5;
-      font-family: Arial, sans-serif;
     }
 
     button {
       background-color: #2ecc71;
       color: white;
-      font-size: 48px;
-      padding: 40px 80px;
+      font-size: 40px;
+      padding: 30px 60px;
       border: none;
-      border-radius: 20px;
+      border-radius: 15px;
       cursor: pointer;
     }
 
@@ -30,6 +29,26 @@
   </style>
 </head>
 <body>
-  <button onclick="alert('sybau')">HI TWIN</button>
+
+<button id="twinBtn">HI TWIN</button>
+
+<script>
+  const btn = document.getElementById("twinBtn");
+  let secondTry = false;
+
+  btn.addEventListener("click", () => {
+    if (!secondTry) {
+      const result = confirm("sybau");
+      if (!result) {
+        btn.textContent = "Jk try again";
+        secondTry = true;
+      }
+    } else {
+      alert("syfm");
+    }
+  });
+</script>
+
 </body>
 </html>
+
