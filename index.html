@@ -10,7 +10,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #f4f4f4;
+      background: #f5f5f5;
     }
 
     button {
@@ -33,26 +33,14 @@
 <button id="btn">HI TWIN</button>
 
 <script>
-  let stage = 0;
+  let clickedOnce = false;
   const btn = document.getElementById("btn");
 
   btn.onclick = () => {
-    if (stage === 0) {
-      const clickedOK = confirm("sybau");
-      if (!clickedOK) {
-        btn.textContent = "Jk try again";
-        stage = 1;
-      }
-    } else if (stage === 1) {
-      confirm("syfm");
-    }
-  };
-</script>
+    if (!clickedOnce) {
+      alert("
 
-</body>
 </html>
 
-</body>
-</html>
 
 
